@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
-import classes from "./BurgerIngredient.css";
+import classes from "./BurgerIngredients.css";
 
-class BurgerIngredients extends Comment {
+class BurgerIngredients extends Component {
     render () {
         let ingredient = null;
 
@@ -32,14 +32,14 @@ class BurgerIngredients extends Comment {
                 ingredient = <div className={classes.Bacon} />;
                 break;
             default:
-                null;
+                ingredient = null;
         }
     
         return ingredient;
     }
 }
 
-BurgerIngredients.PropTypes = {
+BurgerIngredients.propTypes = {
     type: PropTypes.string.isRequired
 };
 
